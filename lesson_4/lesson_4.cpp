@@ -1,9 +1,6 @@
 ﻿#include "include/lesson_4.h"
 using namespace std;
 
-#include <algorithm>
-#include <windows.h>
-#include <stdio.h>
 
 void print(const vector<int>& a)
 {
