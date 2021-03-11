@@ -50,5 +50,17 @@ int main()
     cout << "count uniq=" << number.size() << endl;
 
     cout << "\np3\n";
+    Hand* hand = new Hand();
+    //hand->Add(new Card(Rank::_6, Suit::diamonds));
+    hand->Add(new Card(Rank::_A, Suit::hearts));
+    hand->Add(new Card(Rank::_10, Suit::diamonds));
+    cout << "Cards in hand: " << endl;
+    for (int i = 0; i < hand->GetTotal(); ++i)
+        cout << hand->GetName(i) << " ";
+    cout << endl;        
+    cout << "Count card = " << hand->GetTotal() << endl;
+    cout << "Sum card = " << hand->GetValue() << endl;
+    delete hand;
+
 }
 
