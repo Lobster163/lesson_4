@@ -120,9 +120,16 @@ void sortInserts(int* array, int first, int last) {
     }
 }
 
+int compare(const void* x1, const void* x2)
+{
+    return (*(int*)x1 - *(int*)x2);
+}
+
 void ArrayInt::sort()
 {
-    sort(m_data, 0, m_length - 1);
+    std::qsort(m_data, m_length,sizeof(int), compare); //30+sec
+    //std::sort(&m_data[0], &m_data[m_length]); //~2min
+    //sort(m_data, 0, m_length - 1);    //<1min
 }
 
 void ArrayInt::sort(int* arr, int first, int last)

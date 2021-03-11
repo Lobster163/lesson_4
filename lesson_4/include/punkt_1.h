@@ -1,6 +1,8 @@
 #pragma once
-#include <cassert> // для assert()
+#include <cassert>
 #include <iostream>
+#include <algorithm>
+
 class ArrayInt
 {
 private:

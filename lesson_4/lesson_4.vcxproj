@@ -85,7 +85,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
@@ -141,13 +141,11 @@
   <ItemGroup>
     <ClCompile Include="lesson_4.cpp" />
     <ClCompile Include="punkt_1.cpp" />
-    <ClCompile Include="punkt_2.cpp" />
     <ClCompile Include="punkt_3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\lesson_4.h" />
     <ClInclude Include="include\punkt_1.h" />
-    <ClInclude Include="include\punkt_2.h" />
     <ClInclude Include="include\punkt_3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
