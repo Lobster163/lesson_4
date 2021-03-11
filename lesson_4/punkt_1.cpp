@@ -1,11 +1,5 @@
 #include "include/punkt_1.h"
 
-//Добавить в контейнерный класс, который был написан в этом уроке, методы:
-    //для удаления последнего элемента массива(аналог функции pop_back() в векторах)
-    //для удаления первого элемента массива(аналог pop_front() в векторах)
-    //для сортировки массива
-    //для вывода на экран элементов.
-
 ArrayInt::ArrayInt(int length):m_length(length)
 {
     assert(length >= 0);
@@ -30,7 +24,6 @@ ArrayInt::~ArrayInt(){ delete[] m_data; }
 void ArrayInt::erase()
 {
     delete[] m_data;
-    // Здесь нам нужно указать m_data значение nullptr, чтобы на выходе не было висячего указателя
     m_data = nullptr;
     m_length = 0;
 }
