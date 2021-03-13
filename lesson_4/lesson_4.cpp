@@ -61,6 +61,5 @@ int main()
     cout << "Count card = " << hand->GetTotal() << endl;
     cout << "Sum card = " << hand->GetValue() << endl;
     delete hand;
-
 }
 

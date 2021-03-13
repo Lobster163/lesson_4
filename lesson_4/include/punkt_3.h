@@ -38,6 +38,7 @@ private:
 public:
 	Card() : m_Suit(Suit::clubs), m_Rank(Rank::_2), m_IsFaceUp(false) {};
 	Card(Rank valueCard, Suit suit) : m_Rank(valueCard), m_Suit(suit), m_IsFaceUp(false) {};
+	~Card(); //добавил после 5 занятия
 	bool Flip();
 	int GetValue();
 	string GetName();
@@ -48,6 +49,7 @@ class Hand
 	private:
 		std::vector<Card*> m_Cards;
 	public:
+		~Hand();//добавил после 5 занятия
 		void Add(Card* pCard);
 		void Clear();
 		int GetTotal();

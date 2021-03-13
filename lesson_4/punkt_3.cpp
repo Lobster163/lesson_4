@@ -6,6 +6,12 @@ bool Card::Flip()
 	return m_IsFaceUp;
 }
 
+Card::~Card()	//добавил после 5 занятия
+{
+	cout << "card destructor" << endl;
+}
+
+
 int Card::GetValue(){return (int)m_Rank;}
 
 string Card::GetName()
@@ -37,9 +43,18 @@ void Hand::Add(Card* pCard)
 {
 	m_Cards.push_back(pCard);
 }
+Hand::~Hand()//добавил после 5 занятия
+{
+	Clear();
+}
 
 void Hand::Clear()
 {
+	/*vector<Card*>::iterator iter = m_Cards.begin();	//добавил после 5 занятия
+	for (iter=m_Cards.begin(); iter!= m_Cards.end(); ++iter)
+	{
+		delete * iter;
+	}*/
 	m_Cards.erase(m_Cards.begin(), m_Cards.end());
 }
 
